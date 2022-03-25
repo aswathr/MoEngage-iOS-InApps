@@ -8,13 +8,13 @@ let package = Package(
     products: [
         .library(
             name: "MoEngageInApp",
-            targets: ["MoEngageInAppSPM","MoEngageInApp"]),
+            targets: ["MoEngageInAppSPM","MoEngageInApps"]),
     ],
     dependencies: [
         .package(name: "MoEngage-iOS-SDK",url: "https://github.com/moengage/MoEngage-iOS-SDK.git", from: "8.0.0"),
     ],
     targets: [
         .target(name: "MoEngageInAppSPM", dependencies: ["MoEngage-iOS-SDK"], path: "Sources/..",exclude: ["MoEngageInApp.podspec", "README.md","./Frameworks/MoEngageInApps.xcframework", "LICENSE","CHANGELOG.md"]),
-        .binaryTarget(name: "MoEngageInApp",path: "./Frameworks/MoEngageInApps.xcframework")
+        .binaryTarget(name: "MoEngageInApps",path: "./Frameworks/MoEngageInApps.xcframework")
     ]
 )
